@@ -1,0 +1,176 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+    padding: 40px 0;
+    position: relative;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    @include md {
+        height: calc(130vh);
+    }
+    @include lg {
+        height: calc(120vh);
+    }
+    @include xxl {
+        height: calc(110vh);
+    }
+    
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        position: relative;
+        // @include md {
+        //     flex-direction: row;
+        //     max-width: 1200px;
+        // }
+        @include xxl {
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        @include lg {
+            flex-direction: row;
+            max-width: 1100px;
+        }
+        // @include xxl {
+        //     flex-direction: row;
+        //     max-width: 1200px;
+        // }
+        .banner-img {
+            position: relative;
+            z-index: 9;
+            width: 200px;
+            margin-bottom: 20px;
+            // @include md {
+            //     width: 500px;
+            //     margin-right: 60px;
+            //     margin-top: 50px;
+            //     margin-bottom: 0;
+            // }
+            // @include xxl {
+            //     width: 600px;
+            //     margin-right: 0;
+            //     margin-top: 0;
+            // }
+            @include lg {
+                width: 400px;
+                margin-right: 10px;
+                margin-top: 25px;
+            }
+            @include md {
+                margin-top: -20px;
+            }
+            @include xxl {
+                width: 550px;
+                margin-right: 0;
+                margin-top: 0;
+            }
+        }
+        .text-content {
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include xxl {
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include lg {
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            // @include xxl {
+            //     position: absolute;
+            //     left: 50px;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            // }
+            @include xl {
+                left: 0;
+            }
+            h1 {
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                color: white;
+                margin-bottom: 20px;
+                @include xxl {
+                    font-size: 145px;
+                }
+                @include md {
+                    font-size: 50px;
+                }
+                @include lg {
+                    font-size: 120px;
+                }
+                // @include xxl {
+                //     font-size: 180px;
+                // }
+            }
+            p {
+                max-width: 300px;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 10px;
+                // @include md {
+                //     max-width: 400px;
+                //     font-size: 14px;
+                //     line-height: 24px;
+                //     margin-bottom: 40px;
+                // }
+                @include lg {
+                    max-width: 400px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+                @include xxl {
+                    max-width: 400px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta {
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    color: white;
+                    font-weight: bold;
+                    width: fit-content;
+                    border: 2px solid white;
+                    border-radius: 3px;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+                    &.v2 {
+                        background-color: white;
+                        color: black;
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                    @include lg {
+                        font-size: 18px;
+                        padding: 3px 6px;
+                    }
+                    @include xxl {
+                        font-size: 18px;
+                        padding: 3px 6px;
+                    }
+                }
+            }
+        }
+    }
+}
